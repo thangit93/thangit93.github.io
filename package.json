@@ -7,11 +7,13 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "deploy2": "push-dir --dir=dist --branch=master"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "nuxt": "^3.13.0"
+    "nuxt": "^3.13.0",
+    "push-dir": "^0.4.1"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

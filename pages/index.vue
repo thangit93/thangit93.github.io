@@ -3,7 +3,7 @@
       <div class="row">
         <!-- Sidebar -->
         <div class="col-lg-4 sidebar">
-          <img src="https://via.placeholder.com/100" alt="Profile Image" class="profile-img">
+          <img src="https://picsum.photos/100" alt="Profile Image" class="profile-img">
           <div class="name">{{ name }}</div>
           <div class="section contact">
             <h2>// Liên hệ</h2>
