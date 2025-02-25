@@ -3,7 +3,7 @@
       <div class="row">
         <!-- Sidebar -->
         <div class="col-lg-4 sidebar">
-          <img src="https://picsum.photos/100" alt="Profile Image" class="profile-img">
+          <img src="~/assets/images/avatar.webp" alt="Thang Tran" class="profile-img">
           <div class="name">{{ name }}</div>
           <div class="section contact">
             <h2>// Liên hệ</h2>
@@ -43,20 +43,20 @@
   <script setup>
   import { onMounted } from 'vue';
   
-  const name = "Nguyen Van A";
+  const name = "Trần Đức Thắng";
   const contact = [
-    "email: nguyen.van.a@example.com",
-    "phone: 0123 456 789",
-    "github: github.com/nguyenvana",
-    "location: Hanoi, VN"
+    "Email: thangtd1993@gmail.com",
+    "Phone: 0979372228",
+    "Github: https://github.com/thangit93",
+    "Location: Hanoi, VN"
   ];
-  const skills = ["JavaScript", "React.js", "Node.js", "Python", "Git", "Docker"];
-  const about = "Full-stack developer với hơn 5 năm kinh nghiệm, đam mê viết code sạch và tối ưu hóa hệ thống. Thích giải quyết vấn đề và học công nghệ mới.";
+  const skills = ["Laravel", "VueJS", "PHP", "Nodejs", "Python", "Git", "Docker"];
+  const about = "Full-stack developer với hơn 10 năm kinh nghiệm, đam mê viết code sạch và tối ưu hóa hệ thống. Thích giải quyết vấn đề và học công nghệ mới.";
   const experience = [
     {
-      title: "Senior Developer @ TechCorp",
-      date: "06/2020 - Present",
-      description: "Xây dựng API RESTful với Node.js, triển khai ứng dụng React, tối ưu hiệu suất hệ thống giảm 30% thời gian tải."
+      title: "Technical Manager @ Lisod Vietnam",
+      date: "12/2024 - Present",
+      description: "Xây dựng và đề xuất các phương án kỹ thuật cho các dự án, kiểm soát và sắp xếp nhân sự kỹ thuật trong công ty."
     },
     {
       title: "Junior Developer @ StartupX",
@@ -65,8 +65,8 @@
     }
   ];
   const education = {
-    degree: "Cử nhân CNTT @ ĐH Bách Khoa HN",
-    date: "2015 - 2019"
+    degree: "Cử nhân CNTT @ ĐH Công nghiệp HN",
+    date: "2011 - 2015"
   };
   
   onMounted(() => {

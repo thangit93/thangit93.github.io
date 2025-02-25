@@ -7,14 +7,15 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' }
       ]
     },
-    baseURL: '/'
+    baseURL: '/',
+    buildAssetsDir: 'assets',
   },
 
   css: ['~/assets/css/main.css', 'bootstrap/dist/css/bootstrap.min.css'],
 
   nitro: {
     preset: 'static',
-    publicPath: '/' // Tạo trang tĩnh cho SSG
+    publicPath: '/'
   },
 
   compatibilityDate: '2025-02-25'
