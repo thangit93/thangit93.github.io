@@ -7,7 +7,7 @@
           <div class="name">{{ name }}</div>
           <div class="section contact">
             <h2>// Liên hệ</h2>
-            <p v-for="item in contact" :key="item">{{ item }}</p>
+            <p v-for="(item, index) in contact" :key="index">{{ index }}: {{ item }}</p>
           </div>
           <div class="section skills">
             <h2>// Kỹ năng</h2>
@@ -44,25 +44,45 @@
   import { onMounted } from 'vue';
   
   const name = "Trần Đức Thắng";
-  const contact = [
-    "Email: thangtd1993@gmail.com",
-    "Phone: 0979372228",
-    "Github: https://github.com/thangit93",
-    "Location: Hanoi, VN"
-  ];
-  const skills = ["Laravel", "VueJS", "PHP", "Nodejs", "Python", "Git", "Docker"];
-  const about = "Full-stack developer với hơn 10 năm kinh nghiệm, đam mê viết code sạch và tối ưu hóa hệ thống. Thích giải quyết vấn đề và học công nghệ mới.";
+  const contact = {
+    "Email": "thangtd1993@gmail.com",
+    "Phone": "0979372228",
+    "Github": "https://github.com/thangit93",
+    "Location": "Hanoi, VN"
+  };
+  const skills = ["Laravel", "VueJS", "PHP", "Nodejs", "Python", "Go", "Git", "Docker", "Tensorflow", "AWS"];
+  const about = "Tôi là 1 Fullstack Developer với hơn 10 năm kinh nghiệm trong lĩnh vực phát triển phần mềm và từng đảm nhận các vai trò quan trọng trong các công ty từng hoạt động: Project Manager, Technical Manager, Senior Fullstack Developer. Ngoài công việc tôi còn có đam mê nghiên cứu các loại công nghệ mới trong lĩnh vực AI";
   const experience = [
     {
-      title: "Technical Manager @ Lisod Vietnam",
+      title: "Technical Manager @ LISOD Vietnam",
       date: "12/2024 - Present",
-      description: "Xây dựng và đề xuất các phương án kỹ thuật cho các dự án, kiểm soát và sắp xếp nhân sự kỹ thuật trong công ty."
+      description: "Xây dựng và đề xuất các phương án kỹ thuật cho các dự án, kiểm soát và đảm bảo chất lượng kỹ thuật các sản phẩm trước khi đưa lên môi trường production. Ngoài ra tôi còn tham gia nghiên cứu các công nghệ mới về AI LLM"
     },
     {
-      title: "Junior Developer @ StartupX",
-      date: "01/2019 - 05/2020",
-      description: "Tham gia phát triển MVP, tích hợp CI/CD với GitHub Actions, hỗ trợ debug và deploy."
-    }
+      title: "Founder & Fullstack Developer @ Vietek Solutions",
+      date: "03/2022 - Present",
+      description: "Xây dựng và phát triển các sản phẩm phần mềm chất lượng cao cho các khách hàng cá nhân và doanh nghiệp, đồng thời vận hành các sản phẩm liên quan đến lĩnh vực giáo dục và thương mại điện tử"
+    },
+    {
+      title: "Senior Software Engineer @ BORDER Z VIETNAM",
+      date: "11/2022 - 12/2024",
+      description: "Đưa ra các giải pháp kỹ thuật và phát triển các sản phẩm phầm mềm cho các khách hàng tại thị trường Nhật Bản"
+    },
+    {
+      title: "Project Manager - Team Lead @ Zinza Technology",
+      date: "07/2018 - 11/2021",
+      description: "Quản lý và đảm bảo chất lượng và tiến độ dự án. Nghiên cứu xây dựng các giải pháp công nghệ mới để ứng dụng vào quy trình phát triển phần mềm"
+    },
+    {
+      title: "Fullstack Developer @ AnVui",
+      date: "12/2017 - 07/2018",
+      description: "Tham gia phát triên sản phẩm phần mềm quản lý nhà xe cho các khách hàng trong lĩnh vực vận tải đường bộ"
+    },
+    {
+      title: "Fullstack Developer @ Mgreeny",
+      date: "04/2015 - 11/2017",
+      description: "Tham gia phát triên 2 sản phẩm phần mềm cho thị trường Nhật Bản bảo gồm: Hệ thống quản lý giáo dục và hệ thống hỗ trợ tuyển dụng"
+    },
   ];
   const education = {
     degree: "Cử nhân CNTT @ ĐH Công nghiệp HN",
@@ -79,7 +99,7 @@
       let animationDuration;
   
       if (el.matches('.section p') || el.matches('.experience-item p:not(.date)')) {
-        animationDuration = Math.max(0.5, textLength / 30); // Nhanh cho giới thiệu và mô tả
+        animationDuration = Math.max(0.5, textLength / 100); // Nhanh cho giới thiệu và mô tả
       } else {
         animationDuration = Math.max(1, textLength / 20); // Tốc độ gốc cho phần khác
       }
