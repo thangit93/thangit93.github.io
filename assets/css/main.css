@@ -29,11 +29,11 @@ body {
     border: 2px solid #00ffcc;
   }
   .typed-text {
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
+    /* display: inline-block; */
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
     border-right: 2px solid;
-    visibility: hidden;
+    /* visibility: hidden; */
   }
   .name {
     font-size: 24px;
@@ -45,9 +45,12 @@ body {
   .section h2 {
     color: #569cd6;
     font-size: 18px;
-    border-bottom: 1px dashed #3c3c3c;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    border-bottom: 1px dashed transparent;
+  }
+  .section h2.is-animating {
+    border-bottom: 1px dashed #3c3c3c;
   }
   .section p, .contact p, .skills ul, .education p, .experience-item p, .experience-item h3 {
     margin: 5px 0;
@@ -59,13 +62,17 @@ body {
     padding: 0;
   }
   .skills li {
-    background: #3c3c3c;
     padding: 5px 10px;
     margin: 5px 0;
     border-radius: 4px;
-    color: #ffcc00;
-    display: inline-block;
+    color: transparent;
+    display: block;
     font-size: 12px;
+    background: transparent;
+  }
+  .skills li.is-animating {
+    background: #3c3c3c;
+    color: #ffcc00;
   }
   .experience-item h3 {
     color: #9cdcfe;
